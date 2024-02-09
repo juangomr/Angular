@@ -1,0 +1,53 @@
+
+  <h1>Alta de usuario</h1>
+  <form #usuarioForm="ngForm" (ngSubmit)="altaUsuario()">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" [(ngModel)]="nombre" required>
+
+    <label for="apellidos">Apellidos:</label>
+    <input type="text" id="apellidos" name="apellidos" [(ngModel)]="apellidos" required>
+
+    <button type="submit">Añadir</button>
+  </form>
+
+  <div *ngIf="altaCorrecta; else ningunaAlta">
+    <p>Alta correcta del usuario {{ nombreCompleto }}</p>
+  </div>
+
+  <ng-template #ningunaAlta>
+    <p>Ninguna alta</p>
+  </ng-template>
+ 
+    <h2>Lista de Personas</h2>
+    <ul>
+      <ng-container *ngFor="let persona of personas; let i = index">
+        <ng-container *ngIf="persona.edad >= 30">
+          <li>
+            <p><strong>Índice: {{ i }}</strong></p>
+            <p><strong>Nombre:</strong> {{ persona.nombre }}</p>
+            <p><strong>Apellidos:</strong> {{ persona.apellidos }}</p>
+            <p><strong>Edad:</strong> {{ persona.edad }}</p>
+            <hr> 
+          </li>
+        </ng-container>
+      </ng-container>
+    </ul>
+
+    <div>
+      <button (click)="seleccionarOpcion('A')">A</button>
+      <button (click)="seleccionarOpcion('B')">B</button>
+      <button (click)="seleccionarOpcion('C')">C</button>
+    
+      <div>
+        <p>{{ textoSeleccionado }}</p>
+      </div>
+    </div>
+  <app-articulo></app-articulo>
+  <h2>Listado de Personas</h2>
+  <app-listado-personas
+  *ngFor="let persona of personas"
+  [persona]="persona"
+  (nombreCambiado)="actualizarNombre(persona, $event)"
+  (apellidosCambiados)="actualizarApellidos(persona, $event)"
+  (edadCambiada)="actualizarEdad(persona, $event)"
+></app-listado-personas>

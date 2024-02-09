@@ -1,0 +1,11 @@
+<p>Detalles del planeta: {{ (detallePlaneta$ | async)?.name }}</p>
+<ul>
+  <li>Periodo rotación: {{ (detallePlaneta$ | async)?.rotation_period }}</li>
+  <li>Periodo orbital: {{ (detallePlaneta$ | async)?.orbital_period }}</li>
+  <li>Diámetro: {{ (detallePlaneta$ | async)?.diameter }}</li>
+  <li>Clima: {{ (detallePlaneta$ | async)?.climate }}</li>
+  <li>Gravedad: {{ (detallePlaneta$ | async)?.gravity }}</li>
+  <li>Terreno: {{ (detallePlaneta$ | async)?.terrain }}</li>
+  <li>Agua en superficie: {{ (detallePlaneta$ | async)?.surface_water }}</li>
+  <li>Población: {{ (detallePlaneta$ | async)?.population }}</li>
+</ul>

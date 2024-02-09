@@ -1,0 +1,14 @@
+<h1>Añadir Personaje</h1>
+
+<input
+  type="text"
+  placeholder="Nombre personaje"
+  [(ngModel)]="personajeNuevo.nombre"
+/>
+
+<br /><br />
+<input
+  type="text"
+  placeholder="Raza personaje"
+  [(ngModel)]="personajeNuevo.raza"
+/><br /><br /><button (click)="anadirPersonaje()">Añadir</button>

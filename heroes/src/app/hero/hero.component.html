@@ -1,0 +1,17 @@
+<h1>{{ tituloHeroe }}</h1>
+
+<p>Nombre: {{ nombre }}</p>
+<p>Edad: {{ edad }}</p>
+<p>Nombre en mayúsculas: {{ nombreMayusculas }}</p>
+<p>Concatenación nombre y edad: {{ nombre + edad }}</p>
+<div>
+  <button class="btn btn-warning" (click)="cambiarEdad()">
+    Cambiar Edad Héroe
+  </button>
+  <div *ngIf="nombre == 'Ironman'" else Nohayboton>
+    <button class="btn btn-danger" (click)="cambiarNombre()">
+      Cambiar Nombre Héroe
+    </button>
+  </div>
+  <ng-template #Nohayboton></ng-template>
+</div>

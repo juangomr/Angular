@@ -1,0 +1,17 @@
+<div>
+    <label>
+      <strong>Nombre:</strong>
+      <input type="text" [(ngModel)]="persona.nombre" (ngModelChange)="cambiarNombre($event)">
+    </label>
+    <br>
+    <label>
+      <strong>Apellidos:</strong>
+      <input type="text" [(ngModel)]="persona.apellidos" (ngModelChange)="cambiarApellidos($event)">
+    </label>
+    <br>
+    <label>
+      <strong>Edad:</strong>
+      <input type="text" [(ngModel)]="persona.edad" (ngModelChange)="cambiarEdad($event)">
+    </label>
+    <hr>
+  </div>

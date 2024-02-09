@@ -1,0 +1,24 @@
+<h2>Formulario de Artículo</h2>
+<form (ngSubmit)="agregarArticulo()">
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" name="nombre" [(ngModel)]="nuevoArticulo.nombre" required>
+
+  <label for="precio">Precio:</label>
+  <input type="number" id="precio" name="precio" [(ngModel)]="nuevoArticulo.precio" required>
+
+  <label for="unidades">Unidades:</label>
+  <input type="number" id="unidades" name="unidades" [(ngModel)]="nuevoArticulo.unidades" required>
+
+  <button type="submit">Agregar Artículo</button>
+</form>
+
+<h2>Listado de Artículos</h2>
+<ul>
+  <li *ngFor="let articulo of articulos; let i = index">
+    <p><strong>Índice: {{ i }}</strong></p>
+    <p><strong>Nombre:</strong> {{ articulo.nombre }}</p>
+    <p><strong>Precio:</strong> {{ articulo.precio }}</p>
+    <p><strong>Unidades:</strong> {{ articulo.unidades }}</p>
+    <hr>
+  </li>
+</ul>

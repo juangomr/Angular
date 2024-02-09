@@ -1,0 +1,13 @@
+<h1>{{ title }}</h1>
+<p>Nombre {{ nombre }}</p>
+<p>Nota: {{ nota }}</p>
+
+<div *ngIf="verdadero">
+  <label>Nombre:</label>
+  <input class="form-control" type="text" aria-label="default input example" />
+</div>
+<label>Nota:</label>
+<input class="form-control" type="text" aria-label="default input example" />
+
+<button btn btn-primary (click)="cambiarNombre()">Cambiar Nombre</button>
+<button btn btn-primary (click)="cambiarNota()">Cambiar Nota</button>

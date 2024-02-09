@@ -1,0 +1,14 @@
+<div class="centrar">
+  <ul>
+    <li *ngFor="let heroe of arrayHeroes">{{ heroe }}</li>
+  </ul>
+  <button class="btn btn-success" (click)="borrarHeroe()">
+    Borrar el último heroe
+  </button>
+  <div *ngIf="booleano; else noMensaje">
+    <p>No se ha borrado nada</p>
+  </div>
+  <ng-template #noMensaje>
+    <p>{{ mensaje }}</p>
+  </ng-template>
+</div>
