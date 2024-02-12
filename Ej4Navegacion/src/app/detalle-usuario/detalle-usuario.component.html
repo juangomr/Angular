@@ -1,0 +1,11 @@
+<div *ngIf="listaDetallesUsuario$ | async as usuario">
+  <h1>Detalles del usuario: {{ usuario.id }}</h1>
+  <hr />
+  <p>Nombre: {{ usuario.name }}</p>
+  <p>Correo: {{ usuario.email }}</p>
+  <p>Username: {{ usuario.username }}</p>
+  <hr />
+  <h1>Detalle de la empresa del usuario:</h1>
+  <hr />
+  <p>Nombre: {{ usuario.company.name }}</p>
+</div>

@@ -1,0 +1,9 @@
+<h1 style="text-align: center; font-weight: bold">Usuarios</h1>
+<ul *ngFor="let usuario of listaUsuario$ | async">
+  <a [routerLink]="['/detalle-usuario', usuario.id]"
+    ><li style="text-align: center">
+      {{ usuario.id }} - {{ usuario.name }} - {{ usuario.username }}
+    </li></a
+  ><br />
+</ul>
+<router-outlet></router-outlet>
