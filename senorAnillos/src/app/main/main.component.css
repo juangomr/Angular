@@ -1,11 +1,8 @@
-table,
-tr,
-td {
-  border: 1px solid black;
+.cuerpo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
-
-table {
-  border-collapse: collapse;
-  text-align: center;
-  width: 100%;
+.primera {
+  margin-left: 5em;
 }

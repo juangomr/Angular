@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Personaje } from '../model/personaje';
 import { AnillosService } from '../services/anillos.service';
+import { Personaje } from '../../model/personaje';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -13,12 +13,18 @@ import { CommonModule } from '@angular/common';
 export class ListPersonajeComponent implements OnInit {
   personajes: Personaje[] = [];
 
-  constructor(private obtenerPersonaje: AnillosService) {}
+  constructor(private anillosService: AnillosService) {}
+
   ngOnInit(): void {
-    this.personajes = this.obtenerPersonaje.getPersonaje();
+    this.obtener();
   }
 
-  eliminarPersonaje(id: number) {
-    this.personajes = this.personajes.filter((p) => p.id !== id);
+  obtener() {
+    this.personajes = this.anillosService.getPersonajes();
+  }
+
+  eliminar(id: number) {
+    this.anillosService.eliminar(id);
+    this.obtener();
   }
 }

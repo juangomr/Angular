@@ -1,14 +1,10 @@
-<h1>Añadir Personaje</h1>
-
-<input
-  type="text"
-  placeholder="Nombre personaje"
-  [(ngModel)]="personajeNuevo.nombre"
-/>
-
-<br /><br />
-<input
-  type="text"
-  placeholder="Raza personaje"
-  [(ngModel)]="personajeNuevo.raza"
-/><br /><br /><button (click)="anadirPersonaje()">Añadir</button>
+<h3>Añadir Personaje</h3>
+<div>
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" [(ngModel)]="nombre" />
+</div>
+<div>
+  <label for="raza">Raza:</label>
+  <input type="text" id="raza" [(ngModel)]="raza" />
+</div>
+<button (click)="agregar()">Añadir</button>
