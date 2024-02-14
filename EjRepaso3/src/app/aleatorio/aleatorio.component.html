@@ -1,0 +1,7 @@
+<h1>Usuario</h1>
+<ul *ngFor="let usuario of (User | async)?.results">
+    <li>{{usuario.name.title}} {{usuario.name.first}} {{usuario.name.last}}</li>
+    <li>{{usuario.email}}</li>
+    <li>{{usuario.location.city}}</li>
+    <img [src]=usuario.picture.large>
+</ul>

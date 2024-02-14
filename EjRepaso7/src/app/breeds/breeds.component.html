@@ -1,0 +1,15 @@
+<ul *ngFor="let r of (raza | async)?.data">
+    <div style="color: red" *ngIf="r.pattern == 'All' else otra">
+        <li>{{r.breed}}</li>
+        <li>{{r.coat}}</li>
+        <li>{{r.country}}</li>
+        <li>{{r.pattern}}</li>
+    </div>
+    <ng-template #otra>
+        <li>{{r.breed}}</li>
+        <li>{{r.coat}}</li>
+        <li>{{r.country}}</li>
+        <li>{{r.pattern}}</li>
+    </ng-template>
+
+</ul>

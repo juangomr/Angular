@@ -1,0 +1,15 @@
+<h1>POSTS</h1>
+
+<button (click)="pintarDatos()">Pulsar</button>
+    <div *ngIf="listaPosts$ | async as post">
+    <table>
+        <tr>
+            <td>Titulo</td>
+            <td>Cuerpo</td>
+        </tr>
+        <tr *ngFor="let p of (listaPosts$ | async) ">
+            <td>{{p.title}}</td>
+            <td>{{p.body}}</td>
+        </tr>
+    </table>
+</div>

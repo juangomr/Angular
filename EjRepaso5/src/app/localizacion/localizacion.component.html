@@ -1,0 +1,6 @@
+<ul *ngFor="let loc of (local | async)?.results">
+    <li>{{loc.id}}</li>
+    <li>{{loc.name}}</li>
+    <li>{{loc.type}}</li>
+    <li>{{loc.dimension}}</li>
+</ul>

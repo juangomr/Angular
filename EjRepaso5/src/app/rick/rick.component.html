@@ -1,0 +1,12 @@
+<h1>Rick</h1>
+<button (click)="mostrarRick()">Pulsar</button>
+
+<div *ngIf="personajes | async as rick">
+    <ul *ngFor="let rick of rick.results;">
+        <li>{{rick.id}}</li>
+        <li>{{rick.name}}</li>
+        <li>{{rick.status}}</li>
+        <li>{{rick.species}}</li>
+        <li>{{rick.episode.length}}</li>
+    </ul>
+</div>

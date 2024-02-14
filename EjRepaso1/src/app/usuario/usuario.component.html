@@ -1,0 +1,15 @@
+<input type="number" placeholder="Introduce un número" [(ngModel)]="numero">
+<button (click)="traerDatos()">Pulsar</button>
+
+<div *ngIf="datosUsuario$ | async as usuario">
+    <p>Nombre: {{usuario.name}}</p>
+    <p>Correo: {{ usuario.email }}</p>
+    <p>Username: {{ usuario.username }}</p>
+    <hr />
+    <h1>Detalle de la dirección del usuario:</h1>
+    <hr />
+    <p>Nombre: {{ usuario.address.suite }}</p>
+    <h1>Detalle de la empresa del usuario:</h1>
+    <hr />
+    <p>Nombre: {{ usuario.company.name }}</p>
+</div>

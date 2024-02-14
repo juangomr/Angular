@@ -1,0 +1,12 @@
+<table>
+    <tr>
+        <td>Id</td>
+        <td>Titulo</td>
+        <td>Boton</td>
+    </tr>
+    <tr *ngFor="let peli of (listaPelis$ | async)?.peliculas">
+        <td>{{peli.id}}</td>
+        <td><a [routerLink]="['/detalles', peli.id]">{{peli.titulo}}</a><router-outlet></router-outlet></td>
+        
+    </tr>
+</table>

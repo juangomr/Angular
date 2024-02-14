@@ -1,0 +1,7 @@
+<h1>Actores</h1>
+
+<ul *ngIf="detallesActor | async as actor">
+    <li>{{actor.nombre}}</li>
+    <li>{{actor.genero}}</li>
+    <li>{{actor.edad}}</li>
+</ul>

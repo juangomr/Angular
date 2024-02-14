@@ -1,0 +1,7 @@
+<ul *ngFor="let episodio of (epi | async)?.results">
+    <li>{{episodio.id}}</li>
+    <li>{{episodio.name}}</li>
+    <li>{{episodio.air_date}}</li>
+    <li>{{episodio.episode}}</li>
+    <li>{{episodio.characters.length}}</li>
+</ul>

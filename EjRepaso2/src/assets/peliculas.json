@@ -1,0 +1,54 @@
+{
+    "peliculas": [
+      {
+        "id": 1,
+        "titulo": "Titanic",
+        "actores": [
+          {"nombre": "Leonardo DiCaprio", "genero": "hombre", "edad": 47},
+          {"nombre": "Kate Winslet", "genero": "mujer", "edad": 46},
+          {"nombre": "Billy Zane", "genero": "hombre", "edad": 56},
+          {"nombre": "Kathy Bates", "genero": "mujer", "edad": 73}
+        ]
+      },
+      {
+        "id": 2,
+        "titulo": "El Padrino",
+        "actores": [
+          {"nombre": "Marlon Brando", "genero": "hombre", "edad": 80},
+          {"nombre": "Al Pacino", "genero": "hombre", "edad": 82},
+          {"nombre": "James Caan", "genero": "hombre", "edad": 81},
+          {"nombre": "Diane Keaton", "genero": "mujer", "edad": 76}
+        ]
+      },
+      {
+        "id": 3,
+        "titulo": "La La Land",
+        "actores": [
+          {"nombre": "Ryan Gosling", "genero": "hombre", "edad": 41},
+          {"nombre": "Emma Stone", "genero": "mujer", "edad": 34},
+          {"nombre": "John Legend", "genero": "hombre", "edad": 43},
+          {"nombre": "Rosemarie DeWitt", "genero": "mujer", "edad": 50}
+        ]
+      },
+      {
+        "id": 4,
+        "titulo": "El Señor de los Anillos",
+        "actores": [
+          {"nombre": "Elijah Wood", "genero": "hombre", "edad": 41},
+          {"nombre": "Ian McKellen", "genero": "hombre", "edad": 83},
+          {"nombre": "Viggo Mortensen", "genero": "hombre", "edad": 64},
+          {"nombre": "Liv Tyler", "genero": "mujer", "edad": 45}
+        ]
+      },
+      {
+        "id": 5,
+        "titulo": "Pulp Fiction",
+        "actores": [
+          {"nombre": "John Travolta", "genero": "hombre", "edad": 68},
+          {"nombre": "Uma Thurman", "genero": "mujer", "edad": 52},
+          {"nombre": "Samuel L. Jackson", "genero": "hombre", "edad": 74},
+          {"nombre": "Bruce Willis", "genero": "hombre", "edad": 68}
+        ]
+      }
+    ]
+  }

@@ -1,0 +1,21 @@
+<button (click)="conectarApi()">Pulsar</button>
+
+<div *ngIf="(ingrediente | async) as ingr">
+    <div *ngFor="let in of ingr.meals">
+        <img src="{{in.strMealThumb}}">
+        <ul>
+            <h1>{{in.strMeal}}</h1>
+            <a href="{{in.strSource}}" target="_blank">Enlace a receta</a>
+        </ul>
+        <ul>
+            <li *ngFor="let in of getIngredientes(in)">{{in}}</li>
+        </ul>
+    </div>
+    <button (click)="getInstrucciones()">Ver instrucciones</button>
+    <div *ngIf="verInstrucciones">
+        <div *ngFor="let in of ingr.meals">
+            <p>{{in.strInstructions}}</p>
+        </div>
+        <button (click)="otraReceta()">Otra receta</button>
+    </div>
+</div>
