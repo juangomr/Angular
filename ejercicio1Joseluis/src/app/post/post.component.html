@@ -1,0 +1,13 @@
+<h1>POST</h1>
+<button (click)="getDatos()">Boton</button>
+<table *ngIf="post | async">
+  <tr>
+    <td>Titulo</td>
+    <td>Cuerpo</td>
+  </tr>
+  <tr *ngFor="let perro of post | async">
+    <td style="border: 1px solid black">{{ perro.title }}</td>
+    <td style="border: 1px solid black">{{ perro.body }}</td>
+  </tr>
+  <tr></tr>
+</table>

@@ -1,0 +1,9 @@
+<label for="num">Introduce un valor numerico:</label>
+<input type="number" name="num" [(ngModel)]="num" />
+<button (click)="getJuan()">DATOS</button>
+<div *ngIf="usuario | async as ana">
+  <p>{{ ana.id }}</p>
+  <p>{{ ana.username }}</p>
+  <p>{{ ana.email }}</p>
+  <p>{{ ana.address.street }}</p>
+</div>

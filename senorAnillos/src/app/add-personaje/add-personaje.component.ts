@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { AnillosService } from '../services/anillos.service';
-import { Personaje } from '../model/personaje';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { AnillosService } from '../services/anillos.service';
 
 @Component({
   selector: 'app-add-personaje',
@@ -11,9 +10,19 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './add-personaje.component.css',
 })
 export class AddPersonajeComponent {
-  constructor(private obtenerPersonaje: AnillosService) {}
-
-  nuevoPersonaje: Personaje = { id: 0, nombre: '', raza: '' };
-
-  anadirPersonaje(personaje: Personaje) {}
+  nombre: string = '';
+  raza: string = '';
+  id: number = 0;
+  constructor(private anillosService: AnillosService) {}
+  agregar(): void {
+    if (this.nombre && this.raza) {
+      this.anillosService.agregarP({
+        id: this.id,
+        nombre: this.nombre,
+        raza: this.raza,
+      });
+      this.nombre = '';
+      this.raza = '';
+    }
+  }
 }
