@@ -1,0 +1,5 @@
+<h1>Libros de la biblioteca</h1>
+<ul *ngFor="let libro of (array)">
+    <li><a [routerLink]="['/libroDetalle', libro.id]">{{libro.id}}</a> - {{libro.autor}} - {{libro.titulo}}</li> <button
+        routerLink="/libroNuevo">Añadir libro</button>
+</ul>

@@ -1,0 +1,8 @@
+<h1>Detalles del libro</h1>
+
+<div *ngIf="libro">
+
+    <p>{{libro.id}} - {{libro.autor}} - {{libro.titulo}}</p>
+
+</div>
+<button routerLink="/libros">Volver a Libros</button>
