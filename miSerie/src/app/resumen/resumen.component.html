@@ -1,0 +1,13 @@
+<h1>Resumen de la solicitud</h1>
+
+<div><label>Nombre:</label>{{ nombrePadre }}</div>
+
+<div><label>Correo:</label>{{ correoPadre }}</div>
+
+<div><label>Serie sugerida:</label> {{ seriePadre }}</div>
+
+<label>Valoracion</label>
+<input class="input-group-text" type="text" [(ngModel)]="valoracionHijo" />
+<button class="btn btn-primary" (click)="enviarValoracion()">
+  Enviar Valoración
+</button>

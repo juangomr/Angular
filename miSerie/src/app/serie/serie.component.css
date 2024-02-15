@@ -1,0 +1,17 @@
+div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 6rem;
+}
+
+div .titulo {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+td,
+ul {
+  margin-bottom: 1rem;
+}

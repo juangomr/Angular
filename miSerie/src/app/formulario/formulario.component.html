@@ -1,0 +1,27 @@
+<div>
+  <h1>Formulario valoración</h1>
+  <label>Serie</label>
+  <input class="input-group-text" type="text" [(ngModel)]="serieHijo" />
+  <label>Correo</label>
+  <input class="input-group-text" type="text" [(ngModel)]="correoHijo" />
+  <label>Nombre</label>
+  <input class="input-group-text" type="text" [(ngModel)]="nombreHijo" />
+  <button (click)="resumenHijo()" class="btn btn-primary">Enviar</button>
+  <div *ngIf="botonOk">
+    <div *ngIf="mostrar">
+      <h1>
+        Valoracion: Gracias {{ nombreHijo }} por su valoración:
+        {{ valoracionRecibida }}
+      </h1>
+    </div>
+    <app-resumen
+      [seriePadre]="serieHijo"
+      [correoPadre]="correoHijo"
+      [nombrePadre]="nombreHijo"
+      (selected)="mostrarRespuesta($event)"
+    ></app-resumen>
+  </div>
+  <div *ngIf="mensajeError">
+    <h1>Por favor, introduce el correo</h1>
+  </div>
+</div>
